@@ -62,27 +62,42 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mock form submission - in a real app, this would send to a backend
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for your message. I'll get back to you within 24 hours.",
+      // Submit to real backend API
+      const response = await axios.post(`${API}/contact`, {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message
       });
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
+      if (response.status === 200) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "Thank you for your message. I'll get back to you within 24 hours.",
+        });
+
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      }
     } catch (error) {
+      console.error('Contact form submission error:', error);
+      
+      let errorMessage = "Please try again or contact me directly via email.";
+      if (error.response?.data?.detail) {
+        errorMessage = error.response.data.detail;
+      } else if (error.message) {
+        errorMessage = error.message;
+      }
+
       toast({
         title: "Error Sending Message",
-        description: "Please try again or contact me directly via email.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {

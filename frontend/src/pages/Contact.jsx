@@ -275,8 +275,8 @@ const Contact = () => {
 
                 <div className="mt-6 p-4 bg-muted/30 rounded-lg">
                   <p className="text-sm text-muted-foreground text-center">
-                    <strong>Note:</strong> This is a demo portfolio. Form submissions are simulated. 
-                    For real contact, please use the email or LinkedIn links above.
+                    <strong>Professional Contact Form:</strong> Messages are securely stored and I'll respond within 24 hours. 
+                    For urgent matters, please use the email or LinkedIn links above.
                   </p>
                 </div>
               </CardContent>

@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field, EmailStr
 from typing import List, Optional
 import uuid
 from datetime import datetime
+import email_validator  # This ensures EmailStr validation works
 
 
 ROOT_DIR = Path(__file__).parent

@@ -91,7 +91,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Get In Touch
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -237,7 +237,7 @@ const Contact = () => {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full text-lg py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                    className="w-full text-lg py-6 bg-gradient-to-r from-blue-600 to-red-700 hover:from-blue-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -267,7 +267,7 @@ const Contact = () => {
 
         {/* Professional Services */}
         <div className="mt-20">
-          <Card className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border-blue-200 dark:border-blue-800">
+          <Card className="bg-gradient-to-r from-blue-600/10 to-red-700/10 border-blue-200 dark:border-blue-800">
             <CardContent className="p-12 text-center">
               <h2 className="text-3xl font-bold mb-6 text-foreground">Professional Services Available</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -276,7 +276,7 @@ const Contact = () => {
                   <p className="text-muted-foreground">Infrastructure assessments, modernization planning, and digital transformation guidance</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 text-purple-600">Cybersecurity Analysis</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-red-600">Cybersecurity Analysis</h3>
                   <p className="text-muted-foreground">Security assessments, compliance audits, and incident response planning</p>
                 </div>
                 <div>

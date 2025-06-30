@@ -80,7 +80,7 @@ const Education = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Education & Certifications
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -94,7 +94,7 @@ const Education = () => {
             <CardHeader className="pb-6">
               <div className="flex items-start space-x-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-red-700 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <GraduationCap className="h-8 w-8 text-white" />
                   </div>
                 </div>
@@ -145,7 +145,7 @@ const Education = () => {
 
         {/* Certifications */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Professional Certifications
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -190,7 +190,7 @@ const Education = () => {
 
         {/* Achievements */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Academic Achievements
           </h2>
           <div className="space-y-6">
@@ -219,7 +219,7 @@ const Education = () => {
 
         {/* Continuous Learning */}
         <div className="text-center">
-          <Card className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border-blue-200 dark:border-blue-800">
+          <Card className="bg-gradient-to-r from-blue-600/10 to-red-700/10 border-blue-200 dark:border-blue-800">
             <CardContent className="p-12">
               <BookOpen className="h-16 w-16 text-blue-600 mx-auto mb-6" />
               <h2 className="text-3xl font-bold mb-6 text-foreground">Commitment to Continuous Learning</h2>
@@ -233,7 +233,7 @@ const Education = () => {
                   <div className="text-muted-foreground">Hours of Hands-on Practice</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-purple-600 mb-2">50+</div>
+                  <div className="text-2xl font-bold text-red-600 mb-2">50+</div>
                   <div className="text-muted-foreground">Cybersecurity Challenges Completed</div>
                 </div>
                 <div>

@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: "Infrastructure Modernization",
       description: "IT infrastructure upgrades and optimization projects",
-      icon: <Code className="h-8 w-8 text-purple-600" />,
+      icon: <Code className="h-8 w-8 text-red-600" />,
       count: 0,
       comingSoon: true
     },
@@ -85,7 +85,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Projects & Work
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -95,7 +95,7 @@ const Projects = () => {
 
         {/* Project Categories Overview */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Project Categories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -132,12 +132,12 @@ const Projects = () => {
 
         {/* Upcoming Projects */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Upcoming Projects
           </h2>
           <div className="space-y-8">
             {upcomingProjects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 bg-gradient-to-r from-blue-50/50 to-purple-50/50 dark:from-blue-900/10 dark:to-purple-900/10">
+              <Card key={index} className="group hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 bg-gradient-to-r from-blue-50/50 to-red-50/50 dark:from-blue-900/10 dark:to-red-900/10">
                 <CardHeader className="pb-4">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                     <div className="flex-1">
@@ -154,7 +154,7 @@ const Projects = () => {
                         </div>
                         <Badge variant="outline" className={
                           project.status === 'Planning' ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-700' :
-                          project.status === 'Research' ? 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 border-purple-300 dark:border-purple-700' :
+                          project.status === 'Research' ? 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 border-red-300 dark:border-red-700' :
                           'bg-gray-50 dark:bg-gray-900/20 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-700'
                         }>
                           {project.status}
@@ -189,7 +189,7 @@ const Projects = () => {
 
         {/* Past Project Highlights */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Past Project Highlights
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -234,7 +234,7 @@ const Projects = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Card className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border-blue-200 dark:border-blue-800">
+          <Card className="bg-gradient-to-r from-blue-600/10 to-red-700/10 border-blue-200 dark:border-blue-800">
             <CardContent className="p-12">
               <FolderOpen className="h-16 w-16 text-blue-600 mx-auto mb-6" />
               <h2 className="text-3xl font-bold mb-6 text-foreground">More Projects Coming Soon</h2>
@@ -242,7 +242,7 @@ const Projects = () => {
                 This portfolio will be regularly updated with new projects, technical writeups, and case studies 
                 from ongoing work in cybersecurity, infrastructure modernization, and team leadership.
               </p>
-              <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-red-700 hover:from-blue-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105">
                 <a href="mailto:contact@gwendolynmalachias.com" className="flex items-center">
                   Discuss a Project <ArrowRight className="ml-2 h-5 w-5" />
                 </a>

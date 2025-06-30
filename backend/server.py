@@ -63,7 +63,7 @@ class ContactMessageResponse(BaseModel):
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Portfolio API is running"}
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
@@ -76,6 +76,65 @@ async def create_status_check(input: StatusCheckCreate):
 async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
+
+# Contact Form Routes
+@api_router.post("/contact", response_model=ContactMessageResponse)
+async def submit_contact_form(contact_data: ContactMessageCreate):
+    """Submit a new contact form message"""
+    try:
+        # Create contact message object
+        contact_message = ContactMessage(**contact_data.dict())
+        
+        # Insert into database
+        result = await db.contact_messages.insert_one(contact_message.dict())
+        
+        if result.inserted_id:
+            logger.info(f"Contact message submitted by {contact_data.email}")
+            return ContactMessageResponse(**contact_message.dict())
+        else:
+            raise HTTPException(status_code=500, detail="Failed to save contact message")
+            
+    except Exception as e:
+        logger.error(f"Error submitting contact form: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@api_router.get("/contact", response_model=List[ContactMessageResponse])
+async def get_contact_messages(limit: int = 50, status: Optional[str] = None):
+    """Get contact messages (admin endpoint)"""
+    try:
+        query = {}
+        if status:
+            query["status"] = status
+            
+        contact_messages = await db.contact_messages.find(query).sort("timestamp", -1).limit(limit).to_list(limit)
+        return [ContactMessageResponse(**msg) for msg in contact_messages]
+        
+    except Exception as e:
+        logger.error(f"Error retrieving contact messages: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@api_router.patch("/contact/{message_id}/status")
+async def update_message_status(message_id: str, status: str):
+    """Update contact message status"""
+    try:
+        if status not in ["unread", "read", "archived"]:
+            raise HTTPException(status_code=400, detail="Invalid status")
+            
+        result = await db.contact_messages.update_one(
+            {"id": message_id},
+            {"$set": {"status": status}}
+        )
+        
+        if result.modified_count:
+            return {"message": "Status updated successfully"}
+        else:
+            raise HTTPException(status_code=404, detail="Message not found")
+            
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error updating message status: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 # Include the router in the main app
 app.include_router(api_router)

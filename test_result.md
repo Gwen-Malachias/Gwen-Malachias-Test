@@ -122,15 +122,18 @@ backend:
 
   - task: "Database Models"
     implemented: true
-    working: "NA"  # needs testing
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Added ContactMessage, ContactMessageCreate, and ContactMessageResponse models with proper validation including EmailStr. MongoDB integration configured."
+        - working: true
+          agent: "testing"
+          comment: "Verified ContactMessage models are working correctly. Email validation using EmailStr is functioning properly. MongoDB integration is successful - all contact form submissions are stored in the database with correct field values and data types."
 
 frontend:
   - task: "Contact Form Integration"

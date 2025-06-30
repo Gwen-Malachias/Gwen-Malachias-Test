@@ -27,7 +27,7 @@ const About = () => {
       description: "Building strong teams and fostering knowledge sharing"
     },
     {
-      icon: <Target className="h-8 w-8 text-purple-600" />,
+      icon: <Target className="h-8 w-8 text-red-600" />,
       title: "Results-Driven",
       description: "Delivering measurable outcomes and continuous improvement"
     }
@@ -53,7 +53,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             About Me
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -63,11 +63,11 @@ const About = () => {
 
         {/* Professional Summary */}
         <div className="mb-20">
-          <Card className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 border-blue-200 dark:border-blue-800">
+          <Card className="bg-gradient-to-br from-blue-50 to-red-50 dark:from-blue-900/10 dark:to-red-900/10 border-blue-200 dark:border-blue-800">
             <CardContent className="p-8">
               <div className="flex items-start space-x-6">
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-red-700 rounded-2xl flex items-center justify-center">
                     <Brain className="h-10 w-10 text-white" />
                   </div>
                 </div>
@@ -84,7 +84,7 @@ const About = () => {
                       <div className="text-sm text-muted-foreground">Users Supported</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-purple-600">8,000+</div>
+                      <div className="text-2xl font-bold text-red-600">8,000+</div>
                       <div className="text-sm text-muted-foreground">Devices Managed</div>
                     </div>
                     <div>
@@ -104,7 +104,7 @@ const About = () => {
 
         {/* Core Values */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Core Values & Approach
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -124,7 +124,7 @@ const About = () => {
 
         {/* Skills & Expertise */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Skills & Technical Expertise
           </h2>
           <Card className="bg-muted/30">
@@ -146,7 +146,7 @@ const About = () => {
 
         {/* Personal Mission */}
         <div className="text-center">
-          <Card className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border-blue-200 dark:border-blue-800">
+          <Card className="bg-gradient-to-r from-blue-600/10 to-red-700/10 border-blue-200 dark:border-blue-800">
             <CardContent className="p-12">
               <Award className="h-16 w-16 text-blue-600 mx-auto mb-6" />
               <h2 className="text-3xl font-bold mb-6 text-foreground">Personal Mission</h2>

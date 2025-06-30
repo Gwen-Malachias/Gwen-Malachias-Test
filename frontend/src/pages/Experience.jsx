@@ -60,7 +60,7 @@ const Experience = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-red-700 bg-clip-text text-transparent">
             Professional Experience
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -137,7 +137,7 @@ const Experience = () => {
                 {/* Impact Metrics */}
                 <div className="bg-muted/30 rounded-lg p-6">
                   <h3 className="text-xl font-semibold mb-4 text-foreground flex items-center">
-                    <Shield className="h-5 w-5 mr-2 text-purple-600" />
+                    <Shield className="h-5 w-5 mr-2 text-red-600" />
                     Impact & Results
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -156,7 +156,7 @@ const Experience = () => {
 
         {/* Skills Summary */}
         <div className="mt-20">
-          <Card className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border-blue-200 dark:border-blue-800">
+          <Card className="bg-gradient-to-r from-blue-600/10 to-red-700/10 border-blue-200 dark:border-blue-800">
             <CardContent className="p-8 text-center">
               <h2 className="text-3xl font-bold mb-6 text-foreground">Core Competencies</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -166,7 +166,7 @@ const Experience = () => {
                   <p className="text-muted-foreground">Mentoring teams, developing training programs, and fostering collaborative environments</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Shield className="h-12 w-12 text-purple-600 mb-4" />
+                  <Shield className="h-12 w-12 text-red-600 mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Security & Compliance</h3>
                   <p className="text-muted-foreground">Implementing cybersecurity frameworks and ensuring regulatory compliance</p>
                 </div>

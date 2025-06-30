@@ -118,7 +118,7 @@ backend:
           comment: "Implemented contact form endpoints: POST /api/contact for form submissions, GET /api/contact for retrieving messages, PATCH /api/contact/{id}/status for updating message status. Added ContactMessage model with email validation. Ready for testing."
         - working: true
           agent: "testing"
-          comment: "Successfully tested POST /api/contact endpoint with valid data. Verified response contains id, timestamp, status='unread'. Email validation works correctly, rejecting invalid email formats. GET /api/contact endpoint returns list of messages, supports limit parameter and status filtering. PATCH /api/contact/{id}/status endpoint correctly updates message status and handles invalid IDs and status values. Verified data is stored in MongoDB with all fields preserved."
+          comment: "All backend API tests passed successfully. POST /api/contact accepts valid data and rejects invalid emails/missing fields. GET /api/contact returns messages with proper filtering. PATCH /api/contact/{id}/status updates status correctly. Database storage confirmed working."
 
   - task: "Database Models"
     implemented: true
@@ -133,7 +133,7 @@ backend:
           comment: "Added ContactMessage, ContactMessageCreate, and ContactMessageResponse models with proper validation including EmailStr. MongoDB integration configured."
         - working: true
           agent: "testing"
-          comment: "Verified ContactMessage models are working correctly. Email validation using EmailStr is functioning properly. MongoDB integration is successful - all contact form submissions are stored in the database with correct field values and data types."
+          comment: "Database models working correctly. Contact messages are properly stored in MongoDB with all fields including timestamp. Email validation works as expected."
 
 frontend:
   - task: "Contact Form Integration"
